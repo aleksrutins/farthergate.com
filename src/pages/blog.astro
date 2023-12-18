@@ -2,14 +2,18 @@
 import {getCollection} from 'astro:content';
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.tsx";
+import {ArrowRight} from "iconoir-react";
 
-const posts = (await getCollection('blog'))//.filter(post => !post.data.draft);
+const posts = (await getCollection('blog')).filter(post => !post.data.draft);
 ---
 
 <Layout title="Blog" themeColor="blue" themeColorAlt="cyan">
     <h1 class="text-3xl font-black pb-3">Blog</h1>
     {posts.map(post =>
-            <Card href={`/blog/${post.slug}`} title={post.data.title}>
+            <Card title={post.data.title}>
+                <a slot="header" href={`/blog/${post.slug}`}>
+                    <ArrowRight width="16" height="16"/>
+                </a>
                 {post.data.publishDate.toDateString()}
                 {post.data.summary}
             </Card>

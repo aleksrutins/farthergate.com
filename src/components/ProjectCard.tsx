@@ -10,10 +10,11 @@ type LanguageInfo = {
 
 type LangleyResponse = LanguageInfo[];
 
-const LanguageIndicator = ({language}: { language: LanguageInfo }) => <div className="flex flex-row items-center gap-2">
-    <div className="w-4 h-4 border rounded-full" style={{backgroundColor: language.color}}></div>
-    <p>{language.language}</p>
-</div>
+const LanguageIndicator = ({language}: { language: LanguageInfo }) => <span
+    className="flex flex-row items-center gap-2">
+    <span className="block w-4 h-4 border rounded-full" style={{backgroundColor: language.color}}></span>
+    <span className="block">{language.language}</span>
+</span>
 
 export default ({name, url, github, children}: {
     name: string,
@@ -36,10 +37,10 @@ export default ({name, url, github, children}: {
             <Github height={24} width={24} aria-hidden={true}/>
         </a>}
     </>} footer={<>
-        {github && <div className="flex flex-row items-center gap-3">
+        {github && <span className="flex flex-row items-center gap-3">
             {languages ? languages.map(lang => <LanguageIndicator language={lang} key={lang.language}/>) :
-                <div className="h-7"/>}
-        </div>}
+                <span className="block h-7"/>}
+        </span>}
     </>}>
         {children}
     </Card>
