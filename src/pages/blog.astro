@@ -1,0 +1,17 @@
+---
+import {getCollection} from 'astro:content';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.tsx";
+
+const posts = (await getCollection('blog'))//.filter(post => !post.data.draft);
+---
+
+<Layout title="Blog" themeColor="blue" themeColorAlt="cyan">
+    <h1 class="text-3xl font-black pb-3">Blog</h1>
+    {posts.map(post =>
+            <Card href={`/blog/${post.slug}`} title={post.data.title}>
+                {post.data.publishDate.toDateString()}
+                {post.data.summary}
+            </Card>
+    )}
+</Layout>

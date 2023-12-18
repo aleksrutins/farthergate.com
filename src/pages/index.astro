@@ -1,7 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import ProjectCard from "../components/ProjectCard.tsx";
 ---
 
 <Layout title="Home">
+    <div class="prose max-w-none">
+        <div class="flex flex-row not-prose">
+            <p class="text-6xl pr-3">👋</p>
+            <div>
+                <h1 class="text-3xl font-black">Hello, world.</h1>
+                <h2 class="text-xl">I'm Aleks Rūtiņš.</h2>
+            </div>
+        </div>
+        <p>I'm a student and developer working with web technologies, systems programming, and desktop app
+            development.</p>
+        <h2>Featured Projects</h2>
+        <div class="not-prose flex flex-row flex-wrap gap-3">
+            <ProjectCard name="Harknology" url="https://harknology.farthergate.com" github="aleksrutins/harknology"
+                         client:visible>
+                Easily manage your class discussions.
+            </ProjectCard>
+            <ProjectCard name="Dynamite" url="https://dynamite.farthergate.com" github="aleksrutins/dynamite"
+                         client:visible>
+                A FOSS LV2-based distortion plugin.
+            </ProjectCard>
+            <ProjectCard name="Butterfly" url="https://butterfly.farthergate.com" github="aleksrutins/butterfly"
+                         client:visible>
+                Cross-database queries for Node.js.
+            </ProjectCard>
+        </div>
+    </div>
 </Layout>

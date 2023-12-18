@@ -4,9 +4,11 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Figtree", "system-ui", "sans-serif"]
+				sans: ["system-ui", "sans-serif"]
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography')
+	],
 }

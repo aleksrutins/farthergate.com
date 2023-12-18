@@ -12,13 +12,23 @@
   "dependencies": {
     "@astrojs/check": "^0.3.3",
     "@astrojs/lit": "^4.0.0",
+    "@astrojs/mdx": "^2.0.1",
+    "@astrojs/react": "^3.0.7",
     "@astrojs/tailwind": "^5.0.3",
+    "@codesandbox/sandpack-react": "^2.10.0",
     "@fontsource/figtree": "^5.0.18",
+    "@lit/task": "^1.0.0",
     "@sentry/astro": "^7.88.0",
     "@spotlightjs/astro": "^1.0.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
     "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^4.0.6",
+    "iconoir-react": "^7.2.0",
     "lit": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.3"
   }

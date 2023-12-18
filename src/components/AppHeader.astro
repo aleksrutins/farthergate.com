@@ -1,0 +1,21 @@
+---
+// listing gradients for tailwind
+// from-green-300 to-emerald-300
+// from-blue-300 to-cyan-300
+// from-purple-300 to-fuchsia-300
+
+interface Props {
+    themeColor: string;
+    themeColorAlt: string;
+}
+
+const {themeColor, themeColorAlt} = Astro.props;
+---
+
+<header class={`bg-gradient-to-r from-${themeColor}-300 to-${themeColorAlt}-300 py-5 px-10 mb-5 sticky top-0 flex flex-row items-center justify-between gap-3`}>
+    <a href="/" class="block"><h1 class="text-xl font-bold">Aleks Rūtiņš</h1></a>
+    <div class="flex flex-row items-center gap-3">
+        <a href="/blog">Blog</a>
+        <a href="/music">Music</a>
+    </div>
+</header>
