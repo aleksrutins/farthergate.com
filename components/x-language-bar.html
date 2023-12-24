@@ -1,0 +1,36 @@
+<div class="language" id="placeholder"></div>
+
+<style>
+    :host {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        height: 6px;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.123);
+        justify-self: end;
+    }
+    .language {
+        height: 6px;
+        background-color: #ccc;
+    }
+</style>
+
+<script>
+    const owner = this.getAttribute('owner');
+    const repo = this.getAttribute('repo');
+    if (owner == null || repo == null) return;
+    const languages = await (await fetch(`https://langley.farthergate.com/${owner}/${repo}`)).json();
+    const totalBytes = languages.reduce((previous, current) => previous + current.amount, 0);
+    this.shadowRoot.querySelector('#placeholder').remove();
+    for (let language of languages) {
+        let el = document.createElement('div');
+        el.classList.add('language');
+        el.style.backgroundColor = language.color;
+        el.style.width = `${(language.amount / totalBytes) * 100}%`;
+        el.title = `${language.language} (${Math.round((language.amount / totalBytes) * 100)}%)`;
+        this.shadowRoot.appendChild(el);
+    }
+</script>

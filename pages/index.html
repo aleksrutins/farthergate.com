@@ -1,4 +1,23 @@
 <extends template="layouts/base.html"></extends>
 
 <h1>Aleks Rūtiņš</h1>
-<p>I'm a student and developer working with web technologies, systems programming, and desktop and mobile development.</p>
+<p>👋 I'm a student and developer working with web technologies, systems programming, and desktop and mobile development.</p>
+
+<h2>Featured Projects</h2>
+<div class="card-list">
+    <x-card url="https://harknology.farthergate.com">
+        <span slot="title">Harknology</span>
+        Easily manage your class discussions.
+        <x-language-bar owner="aleksrutins" repo="harknology" slot="footer"/>
+    </x-card>
+    <x-card url="https://cheetah.farthergate.com">
+        <span slot="title">Cheetah</span>
+        A fast and flexible static site generator. This site is built with it!
+        <x-language-bar owner="aleksrutins" repo="cheetah" slot="footer"/>
+    </x-card>
+    <x-card url="https://dynamite.farthergate.com">
+        <span slot="title">Dynamite</span>
+        A customizable LV2 distortion plugin.
+        <x-language-bar owner="aleksrutins" repo="dynamite" slot="footer"/>
+    </x-card>
+</div>

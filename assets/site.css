@@ -8,3 +8,11 @@ body {
     padding: 25px;
     margin: auto;
 }
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: stretch;
+}
