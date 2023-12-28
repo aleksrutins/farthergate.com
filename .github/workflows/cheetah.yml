@@ -36,11 +36,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: Build with cheetah
-        run: nix run "https://flakehub.com/f/aleksrutins/cheetah/*.tar.gz"
+        run: nix build .#site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_build/pages
+          path: ./result
 
   # Deployment job
   deploy:
