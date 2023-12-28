@@ -35,6 +35,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - uses: cachix/cachix-action@v13
+        with:
+            name: aleksrutins
       - name: Build with cheetah
         run: nix build .#site
       - name: Upload artifact
