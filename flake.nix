@@ -1,7 +1,7 @@
 {
   inputs = {
     utils.url = "github:numtide/flake-utils";
-    cheetah.url = "https://flakehub.com/f/aleksrutins/cheetah/*.tar.gz";
+    cheetah.url = "github:aleksrutins/cheetah";
   };
 
   outputs = { self, utils, cheetah }:
