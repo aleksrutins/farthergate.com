@@ -1,0 +1,15 @@
+image: alpine/edge
+packages:
+    - ruby
+    - hut
+environment:
+    site: aleksrutins.srht.site
+tasks:
+    - build: |
+          cd farthergate.com
+          bundle install
+          bundle exec ruby build.rb
+    - package: |
+          tar -cvz _build/. > ../site.tar.gz
+    - upload: |
+          hut pages publish -d $site site.tar.gz
