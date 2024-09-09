@@ -1,6 +1,7 @@
 image: alpine/edge
 packages:
     - ruby
+    - ruby-bundler
     - hut
 environment:
     site: aleksrutins.srht.site
