@@ -1,8 +1,30 @@
-@import url(https://fonts.bunny.net/css?family=dm-mono:400,400i,500,500i);
+@font-face {
+    font-family: "DM Mono";
+    src: url("DM_Mono/DMMono-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "DM Mono";
+    font-weight: 500;
+    src: url("DM_Mono/DMMono-Medium.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "DM Mono";
+    font-style: italic;
+    src: url("DM_Mono/DMMono-Italic.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "DM Mono";
+    font-weight: 500;
+    font-style: italic;
+    src: url("DM_Mono/DMMono-MediumItalic.ttf") format("opentype");
+}
 
 :root {
     font-family: "DM Mono", "Courier New", Courier, monospace;
-    background-color: beige;
+    background-color: hsl(224, 44%, 95%);
 }
 
 body {
