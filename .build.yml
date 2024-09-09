@@ -5,7 +5,7 @@ packages:
     - hut
 oauth: pages.sr.ht/PAGES:RW
 environment:
-    site: aleksrutins.srht.site
+    site: farthergate.com
 tasks:
     - build: |
           cd farthergate.com
