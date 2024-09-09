@@ -12,7 +12,7 @@ tasks:
       bundle install --path vendor/bundle
       bundle exec ruby build.rb
   - package: |
-      cd farthergate.com
-      tar -cvz _build/. > ../site.tar.gz
+      cd farthergate.com/_build
+      tar -cvz . > ../../site.tar.gz
   - upload: |
       hut pages publish -d $site site.tar.gz
