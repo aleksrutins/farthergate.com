@@ -8,7 +8,7 @@ environment:
 tasks:
     - build: |
           cd farthergate.com
-          bundle install
+          bundle install --path vendor/bundle
           bundle exec ruby build.rb
     - package: |
           tar -cvz _build/. > ../site.tar.gz
