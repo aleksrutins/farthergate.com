@@ -20,6 +20,12 @@ class Pages::Home < ::Phlex::HTML
         )
 
         project_link(
+          name: "mzk",
+          url: "https://sr.ht/~aleksrutins/mzk",
+          desc: "bash scripts to help you manage your zettelkasten"
+        )
+
+        project_link(
           name: "dynamite",
           url: "https://dynamite.farthergate.com/",
           desc: "a customizable lv2 distortion plugin"
