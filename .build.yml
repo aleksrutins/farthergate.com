@@ -1,6 +1,7 @@
 image: alpine/edge
 packages:
     - ruby
+    - ruby-dev
     - ruby-bundler
     - hut
 oauth: pages.sr.ht/PAGES:RW
