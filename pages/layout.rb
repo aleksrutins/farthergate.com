@@ -32,6 +32,8 @@ module Pages
           meta(charset: "utf-8")
           meta(name: "viewport", content: "width=device-width, initial-scale=1.0")
           link(rel: "stylesheet", href: "/site.css")
+          link(rel: "prefetch", href: "/DM_Mono/DMMono-Regular.ttf")
+          link(rel: "prefetch", href: "/DM_Mono/DMMono-Medium.ttf")
         }
         body {
           header {
