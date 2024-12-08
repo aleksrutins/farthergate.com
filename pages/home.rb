@@ -15,7 +15,7 @@ class Pages::Home < ::Phlex::HTML
       ul {
         project_link(
           name: "phlexite",
-          url: "https://sr.ht/~aleksrutins/phlexite",
+          url: "https://github.com/aleksrutins/phlexite",
           desc: "a simple static site generator using phlex for templating"
         )
 
