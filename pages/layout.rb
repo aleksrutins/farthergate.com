@@ -12,7 +12,11 @@ module Pages
       about: {
         title: "About",
         url: "/about"
-      }
+      },
+      garden: {
+        title: "Garden",
+        url: "https://garden.farthergate.com"
+      },
     }
 
     def initialize(page)
