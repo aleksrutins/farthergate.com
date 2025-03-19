@@ -38,6 +38,8 @@ module Pages
           link(rel: "prefetch", href: "/DM_Mono/DMMono-Regular.ttf")
           link(rel: "prefetch", href: "/DM_Mono/DMMono-Medium.ttf")
           link(rel: "stylesheet", href: "/site.css")
+
+          script(defer: true, 'data-domain' => "farthergate.com", src: "https://plausible.farthergate.com/js/script.js")
         }
         body {
           header {
